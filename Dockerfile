@@ -1,4 +1,4 @@
-# Use the official Node.js 19.9.0 image as a parent image
+# Use the official Node.js 20.12.1 image as a parent image
 FROM node:20.12.1-alpine
 
 # Set the working directory in the container
@@ -9,7 +9,6 @@ COPY package.json yarn.lock ./
 
 # Install dependencies
 RUN yarn install
-
 
 # Copy the rest of your application's code into the working directory
 COPY . .
